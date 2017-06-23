@@ -1,0 +1,11 @@
+<md-grid-list cols="3" rowHeight="2:1">
+  <md-grid-tile *ngFor="let i of items|async; let ind = index;">
+    <md-card>
+      <span [ngClass]="{'checked': i.completed}">{{i.todo}}</span>
+      <button md-raised-button (click)="editTodo(i, ind )">Edit</button>
+      <md-checkbox [(ngModel)]="i.completed" (change)="toggleDone(i, ind)">Done</md-checkbox>
+      <button md-mini-fab class="x" (click)="removeItem(ind)">x</button>
+      <div><span style="font-size:10px; float:right">Created: {{d}} </span></div>
+    </md-card>
+  </md-grid-tile>
+</md-grid-list>

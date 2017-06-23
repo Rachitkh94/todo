@@ -1,0 +1,6 @@
+<h1 md-dialog-title>Edit ToDo</h1>
+<md-input-container>
+  <input mdInput #intodo placeholder="ToDo" [(ngModel)]="todo">
+</md-input-container>
+<button md-raised-button color="primary" (click)="dialogRef.close({todo: intodo.value})">Edit</button>
+<button md-raised-button (click)="dialogRef.close()">Close Dialog</button>

@@ -1,0 +1,6 @@
+<div class="addItem">
+  <md-input-container md-no-float>
+    <input mdInput #antodo placeholder="Add New Item" [(ngModel)]="todo" (keyup.enter) = "checkEnter(antodo.value)">
+  </md-input-container>
+  <button md-raised-button (click)="pushItem(todo)" [disabled]="!todo">Add</button>
+</div>

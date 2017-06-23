@@ -1,0 +1,11 @@
+.x {
+  background-color: #C2185B;
+}
+
+.d {
+  float: right;
+}
+
+.checked {
+  text-decoration: line-through;
+}
